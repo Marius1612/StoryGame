@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chaptersLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+    tools:context=".DarkLight_Chapters"
+
+        >
+
+
+        <Button
+            android:id="@+id/chaptersBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:onClick="backToMenuFromChapters" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutChaptersScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chaptersTxt"
+                android:layout_width="263dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Chapters"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                android:textStyle="bold|italic" />
+
+
+            <Button
+                android:id="@+id/chapterOneBtn"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="114dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/chapterTwoBtn"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="114dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/chapterThreeBtn"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="114dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/three" />
+
+            <Button
+                android:id="@+id/chapterFourBtn"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="114dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/four" />
+
+            <Button
+                android:id="@+id/chapterFiveBtn"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="114dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/five" />
+
+            <Button
+                android:id="@+id/chapterSixBtn"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="114dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/six" />
+
+            <Button
+                android:id="@+id/chapterSevenBtn"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="114dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/seven" />
+
+            <Button
+                android:id="@+id/chapterEightBtn"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="114dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/eight" />
+
+            <Button
+                android:id="@+id/chapterNineBtn"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="114dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/nine" />
+
+            <Button
+                android:id="@+id/chapterTenBtn"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="114dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/ten" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DarkLight</string>
+    <string name="darklight">DARKLIGHT</string>
+    <string name="start">START</string>
+    <string name="quitBtn">Button</string>
+    <string name="chaptersBtn">Button</string>
+    <string name="en">EN</string>
+    <string name="quit">Quit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="chapter_1">Chapter 1</string>
+    <string name="one">One</string>
+    <string name="two">two</string>
+    <string name="three">three</string>
+    <string name="four">four</string>
+    <string name="five">Five</string>
+    <string name="six">six</string>
+    <string name="seven">Seven</string>
+    <string name="eight">eight</string>
+    <string name="nine">nine</string>
+    <string name="ten">ten</string>
+
+
+</resources>
