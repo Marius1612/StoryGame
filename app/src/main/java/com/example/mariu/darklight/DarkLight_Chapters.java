@@ -18,4 +18,9 @@ public class DarkLight_Chapters extends AppCompatActivity {
         this.startActivity(intent);
 
     }
+
+    public void enterChapterOne(View view) {
+        Intent intent = new Intent(this, Darklight_ChapterOne.class);
+        this.startActivity(intent);
+    }
 }
