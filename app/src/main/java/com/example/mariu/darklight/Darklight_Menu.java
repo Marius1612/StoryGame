@@ -1,6 +1,7 @@
 package com.example.mariu.darklight;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -55,7 +56,7 @@ public class Darklight_Menu extends AppCompatActivity {
     }
 
     public void chapterPage(View view) {
-        setContentView(R.layout.activity_chapters);
-
+        Intent intent = new Intent(this, DarkLight_Chapters.class);
+        this.startActivity(intent);
     }
 }
