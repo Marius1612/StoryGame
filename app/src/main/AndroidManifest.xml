@@ -25,6 +25,7 @@
                 <category android:name="android.intent.category.ALTERNATIVE" />
             </intent-filter>
         </activity>
+        <activity android:name=".chapters.Darklight_ChapterOne" />
     </application>
 
 </manifest>
