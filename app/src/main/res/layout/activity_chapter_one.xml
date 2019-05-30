@@ -25,6 +25,7 @@
             android:id="@+id/backToChapterFromChapter1Btn"
             android:layout_width="71dp"
             android:layout_height="wrap_content"
+            android:onClick="backToChaptersFromChapter"
             android:text="Back" />
 
     </LinearLayout>
@@ -53,9 +54,27 @@
                 android:id="@+id/storyTxtOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/storyTxtOne"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/talkBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ask her who she is" />
+
+            <Button
+                android:id="@+id/throwBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Throw a knife" />
+
+            <Button
+                android:id="@+id/warnBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="warnAction"
+                android:text="Warn her to keep the distance" />
 
         </LinearLayout>
     </ScrollView>

@@ -24,11 +24,11 @@ public class Darklight_Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
 
-        closeAppYesBtn=findViewById(R.id.closeAppYesBtn);
-        closeAppNoBtn=findViewById(R.id.closeAppNoBtn);
-        startBtn=findViewById(R.id.startBtn);
-        quitBtn=findViewById(R.id.quitBtn);
-        chaptersBtn=findViewById(R.id.chaptersBtn);
+        closeAppYesBtn = findViewById(R.id.closeAppYesBtn);
+        closeAppNoBtn = findViewById(R.id.closeAppNoBtn);
+        startBtn = findViewById(R.id.startBtn);
+        quitBtn = findViewById(R.id.quitBtn);
+        chaptersBtn = findViewById(R.id.chaptersBtn);
         areYouSureQuitPopup = findViewById(R.id.areYouSureQuitPopup);
     }
 
@@ -39,8 +39,6 @@ public class Darklight_Menu extends AppCompatActivity {
         quitBtn.setVisibility(closeAppNoBtn.INVISIBLE);
         chaptersBtn.setVisibility(closeAppNoBtn.INVISIBLE);
         areYouSureQuitPopup.setVisibility(areYouSureQuitPopup.VISIBLE);
-
-
     }
 
 
