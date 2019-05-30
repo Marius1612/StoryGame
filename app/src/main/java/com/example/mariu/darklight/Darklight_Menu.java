@@ -23,10 +23,6 @@ public class Darklight_Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        if( getIntent().getBooleanExtra("Exit me", false)){
-            finish();
-            return;
-        }
 
         closeAppYesBtn=findViewById(R.id.closeAppYesBtn);
         closeAppNoBtn=findViewById(R.id.closeAppNoBtn);
@@ -49,11 +45,10 @@ public class Darklight_Menu extends AppCompatActivity {
 
 
     public void quitAppYesAction(View view) {
-        Intent intent = new Intent(this, Darklight_Menu.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra("Exit me", true);
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-        finish();
     }
 
     public void quitAppNoAction(View view) {
