@@ -22,16 +22,17 @@
         app:layout_constraintVertical_bias="0.0">
 
         <Button
-            android:id="@+id/backToChapterFromChapter1Btn"
-            android:layout_width="71dp"
+            android:id="@+id/restartOptions"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="backToChaptersFromChapter"
+            android:onClick="restartOptions"
             android:text="Back" />
 
     </LinearLayout>
 
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -46,6 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
+            android:id="@+id/linearLayoutChapterOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -75,6 +77,28 @@
                 android:layout_height="wrap_content"
                 android:onClick="warnAction"
                 android:text="Warn her to keep the distance" />
+
+            <Button
+                android:id="@+id/chargeWithKnivesBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="chargeWithKnives"
+                android:text="Charge with knives"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/castProtectionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="cast a protective spell(-4 Light)"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/runBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Run"
+                android:visibility="gone" />
 
         </LinearLayout>
     </ScrollView>
@@ -106,4 +130,67 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginLeft="147dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginRight="149dp"
+        android:onClick="goToDeathLayout"
+        android:text="NEXT"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/restartFromTheLastCheckPointBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Restart From the last checkpoint"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/restartChapterBtn"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="63dp"
+        android:text="Restart Chapter"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restartFromTheLastCheckPointBtn"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <Button
+        android:id="@+id/goToMenuFromAChapterBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="122dp"
+        android:onClick="goToMenuFromAChapterAction"
+        android:text="MENU"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restartChapterBtn"
+        app:layout_constraintVertical_bias="0.060000002" />
+
 </android.support.constraint.ConstraintLayout>

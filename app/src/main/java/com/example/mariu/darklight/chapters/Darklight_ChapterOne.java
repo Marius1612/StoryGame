@@ -7,8 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.mariu.darklight.DarkLight_Chapters;
+import com.example.mariu.darklight.Darklight_Menu;
 import com.example.mariu.darklight.R;
+import com.example.mariu.darklight.death.Death;
 import com.example.mariu.darklight.utility.StoryStrings;
 
 
@@ -19,12 +20,19 @@ public class Darklight_ChapterOne extends AppCompatActivity {
     TextView lifePointsTxt;
     TextView lightPointsTxt;
     TextView storyTxtOneTxt;
+    Death death = new Death();
 
     Button warnBtn;
     Button talkBtn;
     Button throwBtn;
+    Button nextIfYouAreDeadBtn;
+    Button chargeWithKnivesBtn;
+    Button runBtn;
+    Button castAProtectiveShieldBtn;
 
-    private String story;
+    Button restartFromTheLastCheckPointBtn;
+    Button restartChapterBtn;
+    Button goToMenuFromChapterOneBtn;
 
     StoryStrings storyStrings = new StoryStrings();
 
@@ -33,15 +41,26 @@ public class Darklight_ChapterOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapter_one);
 
-        lifePointsTxt = (TextView) findViewById(R.id.lifePointsNumberTxt);
-        lightPointsTxt = (TextView) findViewById(R.id.lightNumberTxt);
-        storyTxtOneTxt = (TextView) findViewById(R.id.storyTxtOne);
+        lifePointsTxt = findViewById(R.id.lifePointsNumberTxt);
+        lightPointsTxt = findViewById(R.id.lightNumberTxt);
+        storyTxtOneTxt = findViewById(R.id.storyTxtOne);
 
-        warnBtn = (Button) findViewById(R.id.warnBtn);
-        talkBtn = (Button) findViewById(R.id.talkBtn);
-        throwBtn = (Button) findViewById(R.id.throwBtn);
+        nextIfYouAreDeadBtn = findViewById(R.id.nextBtn);
+        restartChapterBtn = findViewById(R.id.restartChapterBtn);
+        restartFromTheLastCheckPointBtn = findViewById(R.id.restartFromTheLastCheckPointBtn);
+        goToMenuFromChapterOneBtn = findViewById(R.id.goToMenuFromAChapterBtn);
 
-        Game();
+        warnBtn = findViewById(R.id.warnBtn);
+        talkBtn = findViewById(R.id.talkBtn);
+        throwBtn = findViewById(R.id.throwBtn);
+        chargeWithKnivesBtn = findViewById(R.id.chargeWithKnivesBtn);
+        castAProtectiveShieldBtn = findViewById(R.id.castProtectionBtn);
+        runBtn = findViewById(R.id.runBtn);
+
+
+        showStats();
+        storyTxtOneTxt.setText(storyStrings.Story1);
+
     }
 
     public void showStats() {
@@ -49,27 +68,63 @@ public class Darklight_ChapterOne extends AppCompatActivity {
         lightPointsTxt.setText("Light: " + String.valueOf(light));
     }
 
-    public void Game() {
-        showStats();
-        story=storyStrings.Story1;
-        storyTxtOneTxt.setText(story);
 
-    }
+    public void restartOptions(View view) {
 
-    public void backToChaptersFromChapter(View view) {
-        Intent intent = new Intent(this, DarkLight_Chapters.class);
-        this.startActivity(intent);
+        if (restartFromTheLastCheckPointBtn.getVisibility() == View.GONE) {
+            restartFromTheLastCheckPointBtn.setVisibility(View.VISIBLE);
+            restartChapterBtn.setVisibility(View.VISIBLE);
+            goToMenuFromChapterOneBtn.setVisibility(View.VISIBLE);
+        } else if (restartFromTheLastCheckPointBtn.getVisibility() == View.VISIBLE) {
+            restartFromTheLastCheckPointBtn.setVisibility(View.GONE);
+            restartChapterBtn.setVisibility(View.GONE);
+            goToMenuFromChapterOneBtn.setVisibility(View.GONE);
+        }
     }
 
     public void warnAction(View view) {
         life -= 2;
-        warnBtn.setVisibility(View.INVISIBLE);
-        talkBtn.setVisibility(View.INVISIBLE);
-        throwBtn.setVisibility(View.INVISIBLE);
-        story +=storyStrings.WarnHerChoice;
-        storyTxtOneTxt.setText(story);
+        warnBtn.setVisibility(View.GONE);
+        talkBtn.setVisibility(View.GONE);
+        throwBtn.setVisibility(View.GONE);
+        storyTxtOneTxt.setText(storyStrings.WarnHerChoice);
         showStats();
+        chargeWithKnivesBtn.setVisibility(View.VISIBLE);
+        runBtn.setVisibility(View.VISIBLE);
+        castAProtectiveShieldBtn.setVisibility(View.VISIBLE);
+    }
 
 
+    public void goToDeathLayout(View view) {
+        Intent intent = new Intent(this, Death.class);
+        this.startActivity(intent);
+    }
+
+    public void chargeWithKnives(View view) {
+        storyTxtOneTxt.setText(storyStrings.chargeWithKnives);
+        life -= 8;
+        showStats();
+        checkForDeath();
+    }
+
+    private void makeAllTheButtonsVanish() {
+        warnBtn.setVisibility(View.GONE);
+        talkBtn.setVisibility(View.GONE);
+        throwBtn.setVisibility(View.GONE);
+        chargeWithKnivesBtn.setVisibility(View.GONE);
+        runBtn.setVisibility(View.GONE);
+        castAProtectiveShieldBtn.setVisibility(View.GONE);
+    }
+
+    private void checkForDeath() {
+        if (death.isDeath(life)) {
+            makeAllTheButtonsVanish();
+            nextIfYouAreDeadBtn.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void goToMenuFromAChapterAction(View view) {
+        Intent intent = new Intent(this, Darklight_Menu.class);
+        this.startActivity(intent);
     }
 }

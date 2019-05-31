@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".chapters.Darklight_ChapterOne" />
+        <activity android:name=".death.Death" />
     </application>
 
 </manifest>
