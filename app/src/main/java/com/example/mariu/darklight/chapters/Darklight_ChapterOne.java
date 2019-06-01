@@ -5,17 +5,20 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.mariu.darklight.Darklight_Menu;
 import com.example.mariu.darklight.R;
 import com.example.mariu.darklight.death.Death;
-import com.example.mariu.darklight.utility.StoryStrings;
 
 
 public class Darklight_ChapterOne extends AppCompatActivity {
-    int life = 10;
-    int light = 10;
+    private int life = 10;
+    private int light = 10;
+
+    private boolean sword=true;
+    private boolean knifes= true;
 
     TextView lifePointsTxt;
     TextView lightPointsTxt;
@@ -34,12 +37,15 @@ public class Darklight_ChapterOne extends AppCompatActivity {
     Button restartChapterBtn;
     Button goToMenuFromChapterOneBtn;
 
-    StoryStrings storyStrings = new StoryStrings();
+    ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapter_one);
+
+      scrollView= findViewById(R.id.scrollView3);
+        scrollView.scrollTo(0,0);
 
         lifePointsTxt = findViewById(R.id.lifePointsNumberTxt);
         lightPointsTxt = findViewById(R.id.lightNumberTxt);
@@ -59,7 +65,7 @@ public class Darklight_ChapterOne extends AppCompatActivity {
 
 
         showStats();
-        storyTxtOneTxt.setText(storyStrings.Story1);
+        storyTxtOneTxt.setText(R.string.storyChapterOneSecondOption);
 
     }
 
@@ -83,25 +89,22 @@ public class Darklight_ChapterOne extends AppCompatActivity {
     }
 
     public void warnAction(View view) {
+        sword=false;
         life -= 2;
         warnBtn.setVisibility(View.GONE);
         talkBtn.setVisibility(View.GONE);
         throwBtn.setVisibility(View.GONE);
-        storyTxtOneTxt.setText(storyStrings.WarnHerChoice);
+        storyTxtOneTxt.setText(R.string.warnHerChoice);
         showStats();
         chargeWithKnivesBtn.setVisibility(View.VISIBLE);
         runBtn.setVisibility(View.VISIBLE);
         castAProtectiveShieldBtn.setVisibility(View.VISIBLE);
+        scrollView.scrollTo(0,0);
     }
 
-
-    public void goToDeathLayout(View view) {
-        Intent intent = new Intent(this, Death.class);
-        this.startActivity(intent);
-    }
 
     public void chargeWithKnives(View view) {
-        storyTxtOneTxt.setText(storyStrings.chargeWithKnives);
+        storyTxtOneTxt.setText(R.string.chargeWithKnivesChoice);
         life -= 8;
         showStats();
         checkForDeath();
@@ -114,6 +117,11 @@ public class Darklight_ChapterOne extends AppCompatActivity {
         chargeWithKnivesBtn.setVisibility(View.GONE);
         runBtn.setVisibility(View.GONE);
         castAProtectiveShieldBtn.setVisibility(View.GONE);
+    }
+
+    public void goToDeathLayout(View view) {
+        Intent intent = new Intent(this, Death.class);
+        this.startActivity(intent);
     }
 
     private void checkForDeath() {

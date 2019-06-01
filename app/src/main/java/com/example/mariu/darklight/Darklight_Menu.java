@@ -1,10 +1,8 @@
 package com.example.mariu.darklight;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,12 +31,12 @@ public class Darklight_Menu extends AppCompatActivity {
     }
 
     public void quitApp(View view) {
-        closeAppYesBtn.setVisibility(closeAppYesBtn.VISIBLE);
-        closeAppNoBtn.setVisibility(closeAppNoBtn.VISIBLE);
-        startBtn.setVisibility(closeAppNoBtn.INVISIBLE);
-        quitBtn.setVisibility(closeAppNoBtn.INVISIBLE);
-        chaptersBtn.setVisibility(closeAppNoBtn.INVISIBLE);
-        areYouSureQuitPopup.setVisibility(areYouSureQuitPopup.VISIBLE);
+        closeAppYesBtn.setVisibility(View.VISIBLE);
+        closeAppNoBtn.setVisibility(View.VISIBLE);
+        startBtn.setVisibility(View.INVISIBLE);
+        quitBtn.setVisibility(View.INVISIBLE);
+        chaptersBtn.setVisibility(View.INVISIBLE);
+        areYouSureQuitPopup.setVisibility(View.VISIBLE);
     }
 
 
@@ -50,12 +48,12 @@ public class Darklight_Menu extends AppCompatActivity {
     }
 
     public void quitAppNoAction(View view) {
-        closeAppYesBtn.setVisibility(closeAppYesBtn.INVISIBLE);
-        closeAppNoBtn.setVisibility(closeAppNoBtn.INVISIBLE);
-        startBtn.setVisibility(closeAppNoBtn.VISIBLE);
-        quitBtn.setVisibility(closeAppNoBtn.VISIBLE);
-        chaptersBtn.setVisibility(closeAppNoBtn.VISIBLE);
-        areYouSureQuitPopup.setVisibility(areYouSureQuitPopup.INVISIBLE);
+        closeAppYesBtn.setVisibility(View.INVISIBLE);
+        closeAppNoBtn.setVisibility(View.INVISIBLE);
+        startBtn.setVisibility(View.VISIBLE);
+        quitBtn.setVisibility(View.VISIBLE);
+        chaptersBtn.setVisibility(View.VISIBLE);
+        areYouSureQuitPopup.setVisibility(View.INVISIBLE);
     }
 
     public void chapterPage(View view) {

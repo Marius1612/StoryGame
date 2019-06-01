@@ -15,8 +15,6 @@ public class Death extends AppCompatActivity {
 
     public boolean isDeath(int life)
     {
-        if(life<=0)
-            return true;
-        return false;
+        return life <= 0;
     }
 }
