@@ -5,12 +5,13 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/darklight"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+         >
 
-        <activity android:name=".Darklight_Menu">
+        <activity android:name=".Darklight_Menu" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,15 +19,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DarkLight_Chapters">
+        <activity android:name=".DarkLight_Chapters" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.ALTERNATIVE" />
             </intent-filter>
         </activity>
-        <activity android:name=".chapters.Darklight_ChapterOne" />
-        <activity android:name=".death.Death" />
+        <activity android:name=".chapters.Darklight_ChapterOne" android:screenOrientation="portrait"/>
+        <activity android:name=".death.Death" android:screenOrientation="portrait" />
     </application>
 
 </manifest>

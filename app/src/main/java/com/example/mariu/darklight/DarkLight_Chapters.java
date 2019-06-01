@@ -15,11 +15,6 @@ public class DarkLight_Chapters extends AppCompatActivity {
         setContentView(R.layout.activity_chapters);
     }
 
-    public void backToMenuFromChapters(View view) {
-        Intent intent = new Intent(this, Darklight_Menu.class);
-        this.startActivity(intent);
-
-    }
 
     public void enterChapterOne(View view) {
         Intent intent = new Intent(this, Darklight_ChapterOne.class);

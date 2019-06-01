@@ -1,13 +1,8 @@
 <resources>
-    <string name="app_name">DarkLight</string>
     <string name="darklight">DARKLIGHT</string>
     <string name="start">START</string>
-
-    <string name="quit">Quit</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="chapter">Chapters</string>
     <string name="are_you_sure">Are you sure?</string>
-    <string name="chapter_1">Chapter 1</string>
     <string name="one">One</string>
     <string name="two">two</string>
     <string name="three">three</string>
@@ -45,6 +40,7 @@
             "\n \n "
             "What do you do?"</string>
     <string name="chargeWithKnivesChoice">"You charge with knives, but... die"</string>
+    <string name="map">Map</string>
 
 
 </resources>

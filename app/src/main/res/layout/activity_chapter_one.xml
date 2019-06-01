@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="385dp"
+        android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginBottom="466dp"
         android:background="@android:color/darker_gray"
@@ -133,21 +133,21 @@
 
     <Button
         android:id="@+id/nextBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="147dp"
         android:layout_marginLeft="147dp"
-        android:layout_marginTop="29dp"
         android:layout_marginEnd="149dp"
         android:layout_marginRight="149dp"
+        android:layout_marginBottom="8dp"
         android:onClick="goToDeathLayout"
-        android:text="NEXT"
-        android:visibility="invisible"
+        android:text="Next"
+        android:textSize="14sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/restartFromTheLastCheckPointBtn"
@@ -166,21 +166,36 @@
     <Button
         android:id="@+id/restartChapterBtn"
         android:layout_width="0dp"
-        android:layout_height="71dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="63dp"
         android:text="Restart Chapter"
         android:textSize="20sp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restartFromTheLastCheckPointBtn"
-        app:layout_constraintVertical_bias="0.060000002" />
+        app:layout_constraintVertical_bias="0.086" />
+
+    <Button
+        android:id="@+id/lastChoiceBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last Choice (Watch a video)"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/goToMenuFromAChapterBtn"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restartChapterBtn" />
 
     <Button
         android:id="@+id/goToMenuFromAChapterBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="122dp"
         android:onClick="goToMenuFromAChapterAction"
         android:text="MENU"
@@ -188,9 +203,9 @@
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restartChapterBtn"
-        app:layout_constraintVertical_bias="0.060000002" />
+        app:layout_constraintVertical_bias="0.126" />
 
 </android.support.constraint.ConstraintLayout>

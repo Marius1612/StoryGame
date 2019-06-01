@@ -11,20 +11,6 @@
 
         >
 
-
-        <Button
-            android:id="@+id/chaptersBackBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back"
-            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-            app:layout_constraintEnd_toStartOf="@+id/scrollView2"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            android:onClick="backToMenuFromChapters" />
-
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="wrap_content"
@@ -51,7 +37,7 @@
                 android:layout_marginBottom="16dp"
                 android:fontFamily="serif"
                 android:gravity="center"
-                android:text="Chapters"
+                android:text="@string/chapter"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="36sp"

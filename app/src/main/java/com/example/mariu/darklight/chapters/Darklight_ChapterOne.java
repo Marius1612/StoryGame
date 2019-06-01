@@ -17,8 +17,8 @@ public class Darklight_ChapterOne extends AppCompatActivity {
     private int life = 10;
     private int light = 10;
 
-    private boolean sword=true;
-    private boolean knifes= true;
+    private boolean sword = true;
+    private boolean knifes = true;
 
     TextView lifePointsTxt;
     TextView lightPointsTxt;
@@ -36,6 +36,7 @@ public class Darklight_ChapterOne extends AppCompatActivity {
     Button restartFromTheLastCheckPointBtn;
     Button restartChapterBtn;
     Button goToMenuFromChapterOneBtn;
+    Button lastChoiceBtn;
 
     ScrollView scrollView;
 
@@ -44,8 +45,8 @@ public class Darklight_ChapterOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapter_one);
 
-      scrollView= findViewById(R.id.scrollView3);
-        scrollView.scrollTo(0,0);
+        scrollView = findViewById(R.id.scrollView3);
+        scrollView.scrollTo(0, 0);
 
         lifePointsTxt = findViewById(R.id.lifePointsNumberTxt);
         lightPointsTxt = findViewById(R.id.lightNumberTxt);
@@ -55,6 +56,7 @@ public class Darklight_ChapterOne extends AppCompatActivity {
         restartChapterBtn = findViewById(R.id.restartChapterBtn);
         restartFromTheLastCheckPointBtn = findViewById(R.id.restartFromTheLastCheckPointBtn);
         goToMenuFromChapterOneBtn = findViewById(R.id.goToMenuFromAChapterBtn);
+        lastChoiceBtn = findViewById(R.id.lastChoiceBtn);
 
         warnBtn = findViewById(R.id.warnBtn);
         talkBtn = findViewById(R.id.talkBtn);
@@ -81,15 +83,17 @@ public class Darklight_ChapterOne extends AppCompatActivity {
             restartFromTheLastCheckPointBtn.setVisibility(View.VISIBLE);
             restartChapterBtn.setVisibility(View.VISIBLE);
             goToMenuFromChapterOneBtn.setVisibility(View.VISIBLE);
+            lastChoiceBtn.setVisibility(View.VISIBLE);
         } else if (restartFromTheLastCheckPointBtn.getVisibility() == View.VISIBLE) {
             restartFromTheLastCheckPointBtn.setVisibility(View.GONE);
             restartChapterBtn.setVisibility(View.GONE);
             goToMenuFromChapterOneBtn.setVisibility(View.GONE);
+            lastChoiceBtn.setVisibility(View.GONE);
         }
     }
 
     public void warnAction(View view) {
-        sword=false;
+        sword = false;
         life -= 2;
         warnBtn.setVisibility(View.GONE);
         talkBtn.setVisibility(View.GONE);
@@ -99,7 +103,7 @@ public class Darklight_ChapterOne extends AppCompatActivity {
         chargeWithKnivesBtn.setVisibility(View.VISIBLE);
         runBtn.setVisibility(View.VISIBLE);
         castAProtectiveShieldBtn.setVisibility(View.VISIBLE);
-        scrollView.scrollTo(0,0);
+        scrollView.scrollTo(0, 0);
     }
 
 
