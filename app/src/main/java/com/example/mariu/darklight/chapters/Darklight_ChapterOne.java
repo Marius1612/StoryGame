@@ -72,8 +72,8 @@ public class Darklight_ChapterOne extends AppCompatActivity {
     }
 
     public void showStats() {
-        lifePointsTxt.setText("Life: " + String.valueOf(life));
-        lightPointsTxt.setText("Light: " + String.valueOf(light));
+        lifePointsTxt.setText(String.format("Life: %s", String.valueOf(life)));
+        lightPointsTxt.setText(String.format("Light: %s", String.valueOf(light)));
     }
 
 

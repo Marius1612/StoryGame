@@ -17,7 +17,7 @@
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="77dp"
-        android:text="YOU DIED"
+        android:text="@string/you_died"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="70sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
@@ -35,10 +35,10 @@
         android:layout_marginEnd="65dp"
         android:layout_marginRight="65dp"
         android:layout_marginBottom="20dp"
-        android:text="Restart from last CheckPoint"
+        android:text="@string/restart_from_the_last_checkpoint"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -49,9 +49,10 @@
         android:layout_marginLeft="118dp"
         android:layout_marginEnd="115dp"
         android:layout_marginRight="115dp"
-        android:layout_marginBottom="222dp"
-        android:text="Restart Chapter"
+        android:layout_marginBottom="224dp"
+        android:text="@string/restart_chapter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

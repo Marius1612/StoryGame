@@ -39,8 +39,21 @@
             "Your sword is broken, but you still have two knives sheathed on the belt. Another option can be to cast a protective spell around you, which should reflect her spells."
             "\n \n "
             "What do you do?"</string>
-    <string name="chargeWithKnivesChoice">"You charge with knives, but... die"</string>
+    <string name="chargeWithKnivesChoice">"You charge with knives, but die"</string>
     <string name="map">Map</string>
+    <string name="back">Back</string>
+    <string name="ask_her_who_she_is">Ask her who she is</string>
+    <string name="throw_a_knife">Throw a knife</string>
+    <string name="warn_her_to_keep_the_distance">Warn her to keep the distance</string>
+    <string name="charge_with_knives">Charge with knives</string>
+    <string name="cast_a_protective_spell_4_light">cast a protective spell(-4 Light)</string>
+    <string name="run">Run</string>
+    <string name="next">Next</string>
+    <string name="restart_from_the_last_checkpoint">Restart From the last checkpoint</string>
+    <string name="restart_chapter">Restart Chapter</string>
+    <string name="last_choice_watch_a_video">Last Choice (Watch a video)</string>
+    <string name="menu">MENU</string>
+    <string name="you_died">YOU DIED</string>
 
 
 </resources>

@@ -48,7 +48,6 @@
                 android:id="@+id/chapterOneBtn"
                 android:layout_width="157dp"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="16dp"
                 android:layout_marginStart="114dp"
                 android:layout_marginLeft="114dp"
                 android:layout_marginTop="10dp"

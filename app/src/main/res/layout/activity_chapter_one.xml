@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
+        android:layout_width="385dp"
         android:layout_height="45dp"
         android:layout_marginBottom="466dp"
         android:background="@android:color/darker_gray"
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="restartOptions"
-            android:text="Back" />
+            android:text="@string/back" />
 
     </LinearLayout>
 
@@ -63,41 +63,41 @@
                 android:id="@+id/talkBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ask her who she is" />
+                android:text="@string/ask_her_who_she_is" />
 
             <Button
                 android:id="@+id/throwBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Throw a knife" />
+                android:text="@string/throw_a_knife" />
 
             <Button
                 android:id="@+id/warnBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="warnAction"
-                android:text="Warn her to keep the distance" />
+                android:text="@string/warn_her_to_keep_the_distance" />
 
             <Button
                 android:id="@+id/chargeWithKnivesBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="chargeWithKnives"
-                android:text="Charge with knives"
+                android:text="@string/charge_with_knives"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/castProtectionBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="cast a protective spell(-4 Light)"
+                android:text="@string/cast_a_protective_spell_4_light"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/runBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Run"
+                android:text="@string/run"
                 android:visibility="gone" />
 
         </LinearLayout>
@@ -141,7 +141,7 @@
         android:layout_marginRight="149dp"
         android:layout_marginBottom="8dp"
         android:onClick="goToDeathLayout"
-        android:text="Next"
+        android:text="@string/next"
         android:textSize="14sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -154,7 +154,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Restart From the last checkpoint"
+        android:text="@string/restart_from_the_last_checkpoint"
         android:textSize="20sp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
@@ -168,7 +168,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="63dp"
-        android:text="Restart Chapter"
+        android:text="@string/restart_chapter"
         android:textSize="20sp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
@@ -182,7 +182,7 @@
         android:id="@+id/lastChoiceBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Last Choice (Watch a video)"
+        android:text="@string/last_choice_watch_a_video"
         android:textSize="20sp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/goToMenuFromAChapterBtn"
@@ -198,7 +198,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginBottom="122dp"
         android:onClick="goToMenuFromAChapterAction"
-        android:text="MENU"
+        android:text="@string/menu"
         android:textSize="20sp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
