@@ -1,19 +1,32 @@
 <resources>
     <string name="darklight">DARKLIGHT</string>
     <string name="start">START</string>
-    <string name="chapter">Chapters</string>
     <string name="are_you_sure">Are you sure?</string>
-    <string name="one">One</string>
     <string name="two">two</string>
     <string name="three">three</string>
     <string name="four">four</string>
     <string name="five">Five</string>
     <string name="six">six</string>
     <string name="seven">Seven</string>
-    <string name="eight">eight</string>
+    <string name="eight">Eight</string>
     <string name="nine">nine</string>
     <string name="ten">ten</string>
     <string name="life">Life:</string>
+    <string name="map">Map</string>
+    <string name="back">Back</string>
+    <string name="ask_her_who_she_is">Ask her who she is</string>
+    <string name="throw_a_knife">Throw a knife</string>
+    <string name="warn_her_to_keep_the_distance">Warn her to keep the distance</string>
+    <string name="charge_with_knives">Charge with knives</string>
+    <string name="cast_a_protective_spell_4_light">cast a protective spell(-4 Light)</string>
+    <string name="run">Run</string>
+    <string name="next">Next</string>
+    <string name="restart_from_the_last_checkpoint">Restart From the last checkpoint</string>
+    <string name="restart_chapter">Restart Chapter</string>
+    <string name="last_choice_watch_a_video">Last Choice (Watch a video)</string>
+    <string name="menu">MENU</string>
+    <string name="you_died">YOU DIED</string>
+
     <string name="storyChapterOneSecondOption">"    You are a reaper from the North. "
             "A professional monster slayer. You were called to Astapor, the biggest city of the East, because the local slayers cannot handle the situation anymore."
             " You are brave and fearless, honorable and bold, remember this as you make choices through the game."
@@ -40,20 +53,9 @@
             "\n \n "
             "What do you do?"</string>
     <string name="chargeWithKnivesChoice">"You charge with knives, but die"</string>
-    <string name="map">Map</string>
-    <string name="back">Back</string>
-    <string name="ask_her_who_she_is">Ask her who she is</string>
-    <string name="throw_a_knife">Throw a knife</string>
-    <string name="warn_her_to_keep_the_distance">Warn her to keep the distance</string>
-    <string name="charge_with_knives">Charge with knives</string>
-    <string name="cast_a_protective_spell_4_light">cast a protective spell(-4 Light)</string>
-    <string name="run">Run</string>
-    <string name="next">Next</string>
-    <string name="restart_from_the_last_checkpoint">Restart From the last checkpoint</string>
-    <string name="restart_chapter">Restart Chapter</string>
-    <string name="last_choice_watch_a_video">Last Choice (Watch a video)</string>
-    <string name="menu">MENU</string>
-    <string name="you_died">YOU DIED</string>
+    <string name="one">One</string>
+    <string name="chapter">Chapters</string>
+    <string name="en">En</string>
 
 
 </resources>
