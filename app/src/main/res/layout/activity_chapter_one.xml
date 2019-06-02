@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="385dp"
+        android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginBottom="466dp"
         android:background="@android:color/darker_gray"

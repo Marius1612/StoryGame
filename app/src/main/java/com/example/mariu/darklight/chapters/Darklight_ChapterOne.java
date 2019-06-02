@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mariu.darklight.Darklight_Menu;
 import com.example.mariu.darklight.R;
@@ -104,6 +105,7 @@ public class Darklight_ChapterOne extends AppCompatActivity {
         runBtn.setVisibility(View.VISIBLE);
         castAProtectiveShieldBtn.setVisibility(View.VISIBLE);
         scrollView.scrollTo(0, 0);
+        Toast.makeText(this, "-2 life", Toast.LENGTH_LONG).show();
     }
 
 
@@ -112,6 +114,7 @@ public class Darklight_ChapterOne extends AppCompatActivity {
         life -= 8;
         showStats();
         checkForDeath();
+        Toast.makeText(this, "-8 life", Toast.LENGTH_LONG).show();
     }
 
     private void makeAllTheButtonsVanish() {
